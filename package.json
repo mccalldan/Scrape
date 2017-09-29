@@ -1,0 +1,27 @@
+{
+  "name": "scrape",
+  "version": "1.0.0",
+  "description": "a news-scraping application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mccalldan/Scrape.git"
+  },
+  "author": "dan mccall",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mccalldan/Scrape/issues"
+  },
+  "homepage": "https://github.com/mccalldan/Scrape#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.15.5",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.11.13",
+    "request": "^2.82.0"
+  }
+}
