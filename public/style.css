@@ -1,0 +1,16 @@
+body{
+	background: url("./img/triangle.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    overflow:hidden;
+	font-family: 'Merriweather', serif;
+}
+
+.navbar{
+	background-color: black;
+	color: white;
+}
+
+#articles{
+	border: solid 5px black;
+	background-color: white;
+}
