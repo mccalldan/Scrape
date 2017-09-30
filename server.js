@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/articlesdb");
+mongoose.connect(process.env.MONGODB_URI ||"mongodb://localhost/articlesdb");
 var db = mongoose.connection;
 
 // Show any mongoose errors
