@@ -1,15 +1,22 @@
 body{
-	background: url("./img/triangle.jpg")no-repeat center center fixed;
-    -webkit-background-size: cover;
-    overflow:hidden;
+	/*background: url("./img/triangle.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;*/
+    /*overflow:hidden;*/
+    background-color: lightgrey;
 	font-family: 'Merriweather', serif;
 }
 
 .navbar{
-	
+	border: solid 2px black
 }
 
 #articles{
-	border: solid 5px black;
+	border: solid 2px black;
 	background-color: white;
+	width:800px;
+
+}
+
+#notes{
+	text-align: left;
 }

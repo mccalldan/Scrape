@@ -1,3 +1,5 @@
+$( document ).ready(function() {
+
 // Grab the articles as a json
 $.getJSON("/articles", function(data) {
   // For each one
@@ -6,7 +8,6 @@ $.getJSON("/articles", function(data) {
     $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].link + "</p>");
   }
 });
-
 
 // Whenever someone clicks a p tag
 $(document).on("click", "p", function() {
@@ -69,4 +70,5 @@ $(document).on("click", "#savenote", function() {
   // Also, remove the values entered in the input and textarea for note entry
   $("#titleinput").val("");
   $("#bodyinput").val("");
+});
 });
