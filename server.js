@@ -29,18 +29,25 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect(process.env.MONGODB_URI ||"mongodb://localhost/articlesdb");
-var db = mongoose.connection;
+if(process.env.NODE_ENV == 'production'){
+  mongoose.connect('mongodb://heroku_p8spmnnp:gtp01oira9e6rt9nbvqh4c4e30@ds157444.mlab.com:57444/heroku_p8spmnnp');
+}
+else{
+  mongoose.connect('mongodb://localhost/articlesdb');
+  
+}
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/articlesdb");
+// var db = mongoose.connection;
 
-// Show any mongoose errors
-db.on("error", function(error) {
-  console.log("Mongoose Error: ", error);
-});
+// // Show any mongoose errors
+// db.on("error", function(error) {
+//   console.log("Mongoose Error: ", error);
+// });
 
-// Once logged in to the db through mongoose, log a success message
-db.once("open", function() {
-  console.log("Mongoose connection successful.");
-});
+// // Once logged in to the db through mongoose, log a success message
+// db.once("open", function() {
+//   console.log("Mongoose connection successful.");
+// });
 
 
 // Routes
