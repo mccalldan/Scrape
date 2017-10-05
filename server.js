@@ -14,7 +14,7 @@ var cheerio = require("cheerio");
 mongoose.Promise = Promise;
 
 // Setting Port
-var port = process.env.PORT || 3000;
+var port = process.env.PORT;
 
 // Initialize Express
 var app = express();
